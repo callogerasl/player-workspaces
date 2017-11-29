@@ -6,7 +6,10 @@ var config = {
     'react-native': path.resolve(__dirname, 'node_modules/react-native'),
   },
   getBlacklistRE() {
-    return blacklist([]);
+    return blacklist([
+
+      /[/\\]Users[/\\]craverod[/\\]hmh[/\\]player-workspaces[/\\]views[/\\]node_modules[/\\]react-native[/\\].*/
+    ]);
   },
   getProjectRoots() {
     return [
@@ -15,6 +18,8 @@ var config = {
 
       // Include your forked package as a new root.
       path.resolve(__dirname, '..', 'node_modules'),
+
+            path.resolve('/Users/craverod/hmh/player-workspaces/views')
     ];
   },
 };

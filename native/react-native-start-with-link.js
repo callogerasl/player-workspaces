@@ -7,14 +7,15 @@
 const packageJson = require('./package.json');
 const fs = require('fs');
 const exec = require('child_process').execSync;
-const RN_CLI_CONFIG_NAME = `rn-cli-config-with-links.js`;
+const RN_CLI_CONFIG_NAME = `rnrn.js`;
 
 main();
 
 function main() {
-  const deps = Object.keys(
-    Object.assign({}, packageJson.dependencies, packageJson.devDependencies)
-  );
+  const deps = ['views']
+  // const deps = Object.keys(
+  //   Object.assign({}, packageJson.dependencies, packageJson.devDependencies)
+  // );
 
   const symlinkPathes = getSymlinkPathes(deps);
   generateRnCliConfig(symlinkPathes, RN_CLI_CONFIG_NAME);
@@ -25,11 +26,14 @@ function getSymlinkPathes(deps) {
   const depLinks = [];
   const depPathes = [];
   deps.forEach(dep => {
-    const stat = fs.lstatSync('../node_modules/' + dep);
+    try {
+   const stat = fs.lstatSync('node_modules/' + dep);
     if (stat.isSymbolicLink()) {
       depLinks.push(dep);
-      depPathes.push(fs.realpathSync('../node_modules/' + dep));
+      depPathes.push(fs.realpathSync('node_modules/' + dep));
+    } } catch(error) {
     }
+    
   });
 
   console.log('Starting react native with symlink modules:');
