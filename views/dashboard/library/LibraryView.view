@@ -1,0 +1,26 @@
+LibraryView Vertical
+position absolute
+bottom 0
+backgroundColor #CCCCCC
+width props.width
+height 600
+borderTopLeftRadius 10 
+borderTopRightRadius 10
+marginLeft 10
+marginRight 10
+Horizontal
+height 45
+justifyContent space-between
+borderBottomWidth 1
+borderBottomColor #4f7878
+paddingTop 10
+Text
+text Library
+fontSize 24
+marginLeft 10
+CloseButton IconButton
+source https://d30y9cdsu7xlg0.cloudfront.net/png/52944-200.png
+onClick props.onCloseLibrary 
+width 25
+height 25 
+marginRight 5

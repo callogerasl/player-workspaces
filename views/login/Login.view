@@ -1,0 +1,128 @@
+Login Vertical
+transform props.transform
+alignItems center
+#justifyContent center
+backgroundColor #F2F2F2
+width props.width
+height props.height 
+Spinner 
+visible props.isLoading
+
+Image
+source https://frightened-cave.surge.sh/hmhplayer.png
+width 252
+height 80
+marginTop 30
+marginBottom 30 
+Tabs Horizontal
+width 700
+ElementaryTab Tab
+isActive props.tab === 'elementary'
+onClick () => props.selectTab('elementary')
+text Elementary School
+width 50% 
+
+MiddleSchoolTab Tab
+isActive props.tab === 'middle-school'
+onClick () => props.selectTab('middle-school')
+text Middle School / High School
+width 50% 
+
+
+MainWrapper Vertical
+backgroundColor #E5F3F6
+paddingTop 10
+alignItems center
+MessageError Text 
+text props.messageError  
+color red
+fontSize 18
+margin 10 
+FiltersWrapper Vertical
+width 700
+zIndex 9999
+when props.tab === 'elementary'
+StateDropdown DropdownModal 
+zIndex 999
+width props.width
+placeholder Type the State
+onCancel props.onCancelState
+onSelect props.onSelectState  
+list props.stateList || []
+
+DistrictDropdown DropdownModal 
+zIndex 888
+marginTop 0
+width props.width
+placeholder Type the District
+onCancel props.onCancelDistrict
+onSelect props.onSelectDistrict  
+list props.districtList || []
+
+SchoolDropdown DropdownModal 
+zIndex 777
+marginTop 0
+width props.width
+placeholder Type the School
+onCancel props.onCancelSchool
+onSelect props.onSelectSchool  
+list props.schoolList || [] 
+
+
+LoginWrapper Vertical
+backgroundColor #E5F3F6
+padding 30
+width 700
+LoginForm Vertical
+backgroundColor #ffffff
+border 1px solid #B7E5ED
+borderRadius 3
+paddingLeft 30
+paddingRight 30 
+Username CaptureText  
+borderBottom 1px solid #B7E5ED 
+placeholder Username  placeholder
+color #1AB0CC 
+minHeight 50
+defaultValue props.username
+onChangeText props.onChangeUser
+Password CaptureSecure  
+placeholder Password  
+color #1AB0CC
+minHeight 50
+defaultValue props.password
+onChangeText props.onChangePassword
+
+LoginButton
+onClick props.onLoginClick
+text LOGIN
+
+
+
+Buttons Horizontal
+marginTop 30
+EdButton BlueButton
+onClick props.gotoEd
+text Go to ED
+
+SingleSignOn BlueButton
+onClick props.gotoSingleSignOn
+text Use Single Sign On
+marginLeft 10
+
+
+Links Horizontal 
+height 100
+width props.width
+margin 30 
+alignItems center
+justifyContent space-around
+LoginHelp Text  
+fontColor #019DBD
+text Login Help
+Register Text  
+fontColor #019DBD
+text Not Registered?
+ForgotPassword Text  
+fontColor #019DBD
+text Forgot Login Details?

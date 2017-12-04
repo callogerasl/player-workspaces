@@ -1,0 +1,13 @@
+Tab Vertical 
+alignItems center
+backgroundColor props.isActive? '#E5F3F6' : '#ffffff'  
+marginTop props.isActive? 0 : 20
+marginRight 0
+justifyContent center
+onClick props.onClick
+padding 15
+width props.width 
+Label Text
+text props.text 
+color props.isActive? '#019DBD' : '#B7E5ED'
+fontSize 20

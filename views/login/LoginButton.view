@@ -1,0 +1,12 @@
+LoginButton Vertical
+backgroundColor #5BBB7D
+padding 15
+marginTop 10
+alignItems center
+justifyContent center
+onClick props.onClick
+Text
+text props.text
+defaultValue LOGIN 
+fontSize 22
+color #ffffff

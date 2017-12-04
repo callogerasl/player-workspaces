@@ -1,0 +1,22 @@
+DropdownModal Vertical  
+zIndex props.zIndex || 999
+marginLeft 30
+marginRight 30
+marginTop props.marginTop || 0
+SearchText CaptureText
+height 40
+backgroundColor #ffffff
+border 1px solid #B7E5ED
+color #4C4E50 
+colorPlaceholder #1AB0CC
+fontSize 18
+paddingLeft 20  
+placeholder props.placeholder 
+onChangeText props.onChangeText 
+value props.selectedItemLabel || props.searchText
+ListDrowpdown 
+shouldShowModal props.shouldShowModal
+list props.listSearch
+onSelectItem props.onSelectItem
+width  props.width
+marginTop props.marginTopCalc

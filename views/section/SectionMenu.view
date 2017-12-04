@@ -1,0 +1,22 @@
+SectionMenu Vertical
+alignItems flex-start
+backgroundColor  #555555
+width 300
+height props.height
+when props.shouldShowSections 
+List 
+from props.dataSource
+overflowY scroll
+Horizontal 
+alignItems center
+onClick  () => props.onItemClick(index)
+height 40
+width  300 
+marginLeft 10 
+marginRight 10 
+borderColor white
+borderTopWidth 1
+Text 
+text item.name
+color white 
+fontSize 18

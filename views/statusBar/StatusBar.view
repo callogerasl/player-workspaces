@@ -1,0 +1,19 @@
+StatusBar Horizontal  
+width props.width 
+height 60
+backgroundColor #E5F3F6
+paddingTop 20 
+alignItems center
+justifyContent space-between
+MenuIcon IconButton
+source https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png
+onClick props.onMenuClick
+
+ScreenName Text
+text props.text
+color black
+fontSize 18
+MenuIcon IconButton
+source https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Signout_font_awesome.svg/2000px-Signout_font_awesome.svg.png
+onClick props.onLogoutClick
+

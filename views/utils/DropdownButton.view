@@ -1,0 +1,20 @@
+DropdownButton Vertical  
+zIndex props.zIndex || 999 
+marginTop props.marginTop || 0 
+Selector Vertical 
+onClick props.onClick
+Text Text
+height 30
+backgroundColor #ffffff 
+color #4C4E50  
+fontSize 18
+marginTop 5 
+text props.selectedItemLabel
+textAlign center
+
+ListDrowpdown 
+shouldShowModal props.shouldShowModal
+list props.list
+onSelectItem props.onSelectItem
+width  props.width
+marginTop props.marginTopCalc

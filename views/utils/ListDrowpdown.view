@@ -1,0 +1,24 @@
+List
+position absolute 
+marginTop props.marginTop
+maxHeight 200
+from props.list
+overflowY scroll
+when props.shouldShowModal
+borderTop 1px solid #B7E5ED
+Horizontal 
+onClick () => props.onSelectItem(index)
+height 40
+width  props.width
+alignItems center
+backgroundColor white 
+backgroundColorHover #B7E5ED
+borderBottom 1px solid #B7E5ED
+borderLeft 1px solid #B7E5ED
+borderRight 1px solid #B7E5ED
+Text
+paddingLeft 10
+paddingRight 10
+text item.label
+color #4C4E50 
+fontSize 18

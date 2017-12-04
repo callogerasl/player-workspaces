@@ -1,0 +1,14 @@
+BlueButton Vertical
+backgroundColor #1AB0CC
+backgroundColorHover #B7E5ED
+alignItems center
+justifyContent center
+width 320
+height 60
+marginTop 10
+onClick props.onClick
+marginLeft props.marginLeft
+Text
+text props.text 
+fontSize 18
+color #ffffff

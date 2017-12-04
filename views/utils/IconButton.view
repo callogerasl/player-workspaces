@@ -1,0 +1,11 @@
+BlueButton Horizontal 
+alignItems center
+justifyContent center
+width 35
+height 35 
+onClick props.onClick 
+marginRight props.marginRight || 0 
+Image
+source  props.source
+width props.width || 35 
+height props.height || 35 

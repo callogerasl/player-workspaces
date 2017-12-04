@@ -1,0 +1,35 @@
+ProgramCard Vertical
+flex 0
+backgroundColor white  
+width 300
+height 300  
+borderRadius 10 
+paddingTop 6
+ProgramDropdown DropdownButton 
+zIndex 888
+marginTop 0
+width 300 
+placeholder Type the Program
+selectedItemLabel props.currentProgram ? props.currentProgram.label : ""
+onCancel props.onCancel
+onSelect props.onSelect  
+list props.programList
+
+Image
+source props.currentProgram ? props.currentProgram.imageUrl : "https://www.w3schools.com/howto/img_fjords.jpg"
+marginTop 3
+width 300
+height 50%
+ViewLibrary Vertical  
+position absolute
+bottom 0
+width 300
+height 40
+borderTopWidth 1
+borderColor black
+alignItems center
+onClick props.onShowLibrary
+Text
+marginTop 10
+text View Library
+fontSize 18

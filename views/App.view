@@ -1,0 +1,15 @@
+App is Vertical
+alignItems center
+flex 1
+justifyContent center 
+transform props.transform
+height props.height
+width props.width 
+backgroundColor blue
+Login
+when !props.isLoggedIn
+
+Dashboard
+height props.height
+width props.width 
+when props.isLoggedIn

@@ -1,5 +1,7 @@
 {
   "name": "core",
   "version": "0.0.1",
-  "dependencies": {}
+  "dependencies": {
+    "mini-unique-id": "^1.0.1"
+  }
 }

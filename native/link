@@ -1,0 +1,5 @@
+#!/bin/bash
+
+ln -fs ../../node_modules/react-native node_modules/react-native
+ln -fs ../../node_modules/expo node_modules/expo
+ln -fs ../../node_modules/views node_modules/views

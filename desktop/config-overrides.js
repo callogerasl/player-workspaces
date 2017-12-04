@@ -9,6 +9,7 @@ module.exports = function override(config, env) {
     babel.include = [babel.include];
   }
 
+  babel.include.push(path.resolve(__dirname, '../core'));
   babel.include.push(path.resolve(__dirname, '../views'));
 
   console.log(babel);
