@@ -3,13 +3,12 @@ import React from "react";
 import { Dimensions } from "react-native";
 import { connect } from "react-redux";
 import * as envDetails from "core/utils/envDetails";
-import * as utils from "core/utils/utils";
 import {
   getStateList,
   getDistrictList,
   getSchoolList,
   doLogin
-} from "core/login/login-duck";
+} from "core/login/login-actions";
 
 const { height, width } = Dimensions.get("window");
 

@@ -1,8 +1,12 @@
 import * as storage from "./storage";
 
-const TC = "tc";
-const HMOF = "hmof";
-const ED = "ed";
+export const TEACHER = "TEACHER";
+export const STUDENT = "STUDENT";
+
+export const TC = "tc";
+export const HMOF = "hmof";
+export const ED = "ed";
+
 const INT = "int";
 const PROD = "prod";
 const CERTRV = "certrv";

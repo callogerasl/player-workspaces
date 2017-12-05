@@ -1,8 +1,8 @@
 import React from "react";
 import Dashboard from "./Dashboard.view.js";
 import { connect } from "react-redux";
-import { onLogOut } from "core/login/login-duck";
-import { getSection, setSection } from "core/sections/section-duck";
+import { logOut } from "core/login/login-actions";
+import { getSection, setSection } from "core/sections/section-actions";
 
 class DashboardLogic extends React.Component {
   state = {
@@ -49,7 +49,7 @@ function mapStateToProps(state, props) {
 }
 
 export default connect(mapStateToProps, {
-  onLogOut,
+  logOut,
   getSection,
   setSection
 })(DashboardLogic);

@@ -1,4 +1,13 @@
 {
   "private": true,
-  "workspaces": ["core", "desktop", "web", "native", "views"]
+  "workspaces": [
+    "core",
+    "desktop",
+    "web",
+    "native",
+    "views"
+  ],
+  "devDependencies": {
+    "views-morph": "^0.8.5"
+  }
 }

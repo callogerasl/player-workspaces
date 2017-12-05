@@ -1,27 +1,5 @@
-import * as sectionService from "./sectionsService";
-
-const isStart = action => action.sequence.type === "start";
-const isSuccess = action =>
-  action.sequence.type === "next" && !action.messageError;
-
-const SECTION_LIST = "SECTION_LIST";
-export const getSection = () => async (dispatch, getState) => {
-  const { section } = getState();
-  if (section.isLoading || section.isLoading) return;
-
-  dispatch({
-    type: SECTION_LIST,
-    payload: sectionService.getSections()
-  });
-};
-
-const SET_SECTION = "SET_SECTION";
-export const setSection = section => async (dispatch, getState) => {
-  dispatch({
-    type: SET_SECTION,
-    payload: section
-  });
-};
+import { SECTION_LIST, SET_SECTION } from "./section-actions";
+import { isStart, isSuccess } from "../utils/utils";
 
 export default function reducer(
   state = {

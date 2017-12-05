@@ -17,7 +17,7 @@ StatusBar
 width props.width
 text Dashboard
 onMenuClick props.onMenuClick
-onLogoutClick props.onLogOut
+onLogoutClick props.logOut
 
 SectionName Text 
 height 40

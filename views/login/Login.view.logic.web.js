@@ -8,7 +8,8 @@ import {
   getDistrictList,
   getSchoolList,
   doLogin
-} from "core/login/login-duck";
+} from "core/login/login-actions";
+
 //uid=jrn17stg5,o=88200010,dc=88200009,st=CA
 class LoginLogic extends React.Component {
   state = {

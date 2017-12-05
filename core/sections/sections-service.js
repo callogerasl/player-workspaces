@@ -1,38 +1,36 @@
 import * as envDetails from "./../utils/envDetails";
 import * as storage from "./../utils/storage";
 import * as networkUtils from "./../utils/networkUtils";
-import * as auth from "./../auth/authenticationModel";
+import { STUDENT, TEACHER, ED, TC, HMOF } from "../utils/envDetails";
 
 var _ = require("lodash");
 var cacheFirst = false;
 
-export async function getSections() {
+const sectionUrls = {
+  [ED]: {
+    [STUDENT]: "/api/identity/v4/students/${ref_id}/sections",
+    [TEACHER]: "/api/identity/v4/teachers/${ref_id}/sections"
+  },
+  [TC]: {
+    [STUDENT]:
+      "/api/identity/v1/students/student/${ref_id}/section;contextId=${platform}",
+    [TEACHER]:
+      "/api/identity/v1/staffPersons/staffPerson/${ref_id}/section;contextId=${platform}"
+  },
+  [HMOF]: {
+    [STUDENT]:
+      "/api/identity/v1/students/student/${ref_id}/section;contextId=${platform}",
+    [TEACHER]:
+      "/api/identity/v1/staffPersons/staffPerson/${ref_id}/section;contextId=${platform}"
+  }
+};
+
+export async function getSections(plataform, role) {
   var result;
   var sectionList = [];
-  var userType = await auth.userType();
-  var isEd = await auth.isEd();
-  var url;
+  var url = sectionUrls[plataform][role];
 
-  switch (userType) {
-    case "edTeacher":
-      url = "/api/identity/v4/teachers/${ref_id}/sections";
-      break;
-    case "edStudent":
-      url = "/api/identity/v4/students/${ref_id}/sections";
-      break;
-    case "teacher":
-      url =
-        "/api/identity/v1/staffPersons/staffPerson/${ref_id}/section;contextId=${platform}";
-      break;
-    case "student":
-      url =
-        "/api/identity/v1/students/student/${ref_id}/section;contextId=${platform}";
-      break;
-    default:
-      console.log("Unrecognized userType: " + userType);
-  }
-
-  if (isEd) {
+  if (plataform === ED) {
     console.log("loading Ed sections");
   } else {
     console.log("loading Basal sections");

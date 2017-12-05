@@ -11,4 +11,4 @@ marginLeft props.marginLeft
 Text
 text props.text 
 fontSize 18
-color #ffffff
+color #fffff0

@@ -35,10 +35,11 @@ export async function postData(url, parameters, httpHeaders) {
   })
     .then(response => response.json())
     .then(responseJson => {
-      return responseJson;
-    })
-    .catch(error => {
-      console.error(error);
+      if (responseJson.error) {
+        throw new Error(responseJson.error);
+      } else {
+        return responseJson;
+      }
     });
 }
 
