@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
+import AppView from "views/App.view.js";
 import { Provider } from "react-redux";
-import AppView from "views/App.view.logic";
 import store from "core/store.js";
 
-export default class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <Provider store={store}>
@@ -12,3 +12,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default App;

@@ -1,9 +1,4 @@
 {
   "private": true,
-  "workspaces": [
-    "core",
-    "desktop",
-    "native",
-    "views"
-  ]
+  "workspaces": ["core", "desktop", "web", "native", "views"]
 }

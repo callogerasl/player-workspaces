@@ -2,8 +2,13 @@
   "name": "views",
   "version": "0.0.1",
   "dependencies": {},
+  "scripts": {
+    "native": "views-morph . --as react-native --watch",
+    "native:build": "views-morph . --as react-native",
+    "web": "views-morph . --as react-dom --watch",
+    "web:build": "views-morph . --as react-dom"
+  },
   "devDependencies": {
-    "core": "*",
     "views-morph": "^0.7.0"
   }
 }
